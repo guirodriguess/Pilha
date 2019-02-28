@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var fila = [];
+		var x;
+		function Fila() {
+			x = parseInt(prompt("Informe um número"));
+			fila.push(x);
+			fila.push(1);
+			fila.push(2);
+			alert("Fila: " + fila);
+			x = fila.shift();
+			alert("elemento: " + x);
+			alert("Fila: " + fila);
+		}
+		function Limpar(){
+			while (fila.length != 0){
+				fila.shift();
+			}
+			alert("Fila: " + fila);
+		}
+		var pilha = [];
+		var x;
+		function Pilha(){
+			x = parseInt(prompt("Informe um número"));
+			pilha.push(x);
+			pilha.push(1);
+			pilha.push(2);
+			alert("Pilha: " + pilha);
+			x = pilha.pop();
+			alert("elemento: " + x);
+			alert("Pilha: " + pilha);
+		}
+		function limparPilha(){
+			while (pilha.length != 0){
+				pilha.pop();
+			}
+			alert("Pilha: " + pilha);
+		}
+		
+	</script>
+</head>
+<body>
+	<!--<input type="number" id="num1">-->
+	<button onclick="Fila()">Executar Fila</button>
+	<button onclick="Limpar()">Limpar</button>
+	<button onclick="Pilha()">Executar Pilha</button>
+	<button onclick="limparPilha()">Limpar Pilha</button>
+
+</body>
+</html>
